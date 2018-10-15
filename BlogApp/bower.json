@@ -1,0 +1,9 @@
+{
+  "name": "blogapp",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "components-font-awesome": "^5.0.6",
+    "ckeditor": "4.8.0"
+  }
+}

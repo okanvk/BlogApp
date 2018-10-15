@@ -1,0 +1,19 @@
+@model IEnumerable<Blog>
+@{
+  Layout=null;
+}
+<div class="list-group">
+  <h5 class="list-group-item " style="background:lightslategray; color:navy;" font-size:large;">Top 5 Read Rate Blog</h5>
+  @foreach(var item in Model){   
+       <a 
+        asp-controller="Blog"
+        asp-action="Details"
+        asp-route-id=@item.BlogId
+        class="list-group-item" style="color:navy;">
+        @item.Title 
+        (<i class="fas fa-envelope text-right" style="opacity:0.5"><i>  @item.ViewCoun </i>)</i>
+
+
+     </a>
+      }
+      </div>

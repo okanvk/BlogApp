@@ -1,0 +1,57 @@
+@model IEnumerable<Category>
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+
+   <div class="bg-primary text-white p-1 text-center">
+      <h2>Category List</h2>
+    </div>
+ <div class="container mt-3">
+
+     <br>
+     <a class="btn btn-primary btn" asp-controller="Category" asp-action="Add">Add</a>
+     <hr>
+   <div class="row">
+  
+     <div class="col">
+
+       @if(Model.Count()>0){
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach(var item in Model){
+                
+                <tr>
+                  <td>@item.CategoryId</td>  
+                  <td>@item.Name</td>                
+                  <td>
+                  <a class="btn btn-primary btn-sm" asp-controller="Category" asp-action="Update" asp-route-id="@item.CategoryId">Update</a>   
+                  @if(item.CategoryId!=3004){               
+                  <a class="btn btn-danger btn-sm" asp-controller="Category" asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
+                  }
+                  </td>
+                </tr>
+              }
+            </tbody>
+
+          </table>
+
+       }
+       else{
+          <div class="alert alert-danger">
+        Blog Eklenmemis</div>
+       }
+
+     </div>
+
+   </div>
+
+ </div> 

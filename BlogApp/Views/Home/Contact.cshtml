@@ -1,0 +1,61 @@
+@model Message
+
+
+<div class="aspage2" style="background-color:whitesmoke;"> 
+   <div style="width:%100; height:300px" class="text-center">
+      <img src="~/img/contact.jpg" width="100%" height="300" >
+  </div>
+<div class="container mt-3" style="margin-left:500px;">
+	<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" asp-controller="Home" asp-action="Contact" method="post">
+          <fieldset>
+            <div class="form-group">
+              <label class="col-md-3 control-label" asp-for="Name">Name</label>
+              <div class="col-md-9">
+                <div><span class="text-danger" asp-validation-for="Name"></span></div>
+                <input   type="text" asp-for="Name"  class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label" asp-for="Email">Email</label>
+              <div class="col-md-9">
+                <div><span class="text-danger" asp-validation-for="Email"></span></div>
+                <input   asp-for="Email" type="text"   class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label" asp-for="Subject">Subject</label>
+              <div class="col-md-9">
+                <div><span class="text-danger" asp-validation-for="Subject"></span></div>
+                <input class="form-control"  asp-for="Subject"   />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label" asp-for="Context">Message</label>
+              <div class="col-md-9">
+                <div><span class="text-danger" asp-validation-for="Context"></span></div>
+                <textarea class="form-control"  asp-for="Context"    rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit"   class="btn btn-primary btn-lg">Submit</button>
+              </div>
+              <div class="col-md-12 text-center">
+                @if(ViewBag.State){
+                <p>Mesaj iletildi</p>
+                }
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+	</div>
+</div>
+</div>
+<div style="height:25px"></div>
+

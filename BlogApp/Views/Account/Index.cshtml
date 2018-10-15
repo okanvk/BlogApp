@@ -1,0 +1,83 @@
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="bg-primary text-white p-1 text-center">
+      <h3>Admin Panel</h3>
+    </div>
+<div class="container mt-3">
+
+  <div class="row">
+      <div class="col-md-6">
+        <div class="bg-primary text-white p-1 text-center">
+      <h3>Blog Process</h3>
+    </div>
+     <div >
+      <img  src="https://www.3goz.com/image/urunler/blog-uygulamalari.jpg" width="540px;" height="150px;" >
+    </div>
+      <table class="table table-bordered table-striped mt-3">
+          <thead>
+            <tr>
+              <th>List</th>
+              <th>Create</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><a class="btn btn-success btn-sm" asp-controller="Blog" asp-action="List">List</a></td>
+                <td><a class="btn btn-success btn-sm" asp-controller="Blog" asp-action="Add" >Create</a></td>
+              </tr>  
+          </tbody>
+        </table>
+       </div>  
+      <div class="col-md-6">
+        <div class="bg-primary text-white p-1 text-center">
+      <h3>Category Process</h3>
+    </div>    
+    <div >
+      <img  src="https://www.beycon.com.tr/webyazilim/wp-content/uploads/2016/04/blog-nedir.png" width="540px;" height="150px;" >
+    </div>
+       <table class="table table-bordered table-striped mt-3">
+          <thead>
+            <tr>
+              <th>List</th>
+              <th>Create</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><a class="btn btn-success btn-sm" asp-controller="Category" asp-action="List">List</a></td>
+                <td><a class="btn btn-success btn-sm" asp-controller="Category" asp-action="Add" >Create</a></td>
+              </tr>  
+          </tbody>
+        </table>
+      </div>
+  </div>
+<div class="row text-center mt-2" >
+      <div class="col-md-9">
+        <div class="bg-primary text-white p-1 text-center" style="margin-left:200px; width:750px;">
+      <h3>Admin Process</h3>
+    </div>
+    <div style="margin-left:200px;">
+      <img  src="https://iz-bilisim.com/blog/wp-content/uploads/2018/01/oqtic-blog-banner.jpg" height="125px;" width="750px;">
+    </div>
+    <table class="table table-bordered table-striped " style="margin-left:200px; width:750px;" >
+          <thead>
+            <tr>
+              <th>Admin List</th>
+              <th>Messages</th>
+              <th>Register</th>
+              <th>Logout</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><a class="btn btn-success btn-sm" asp-controller="Account" asp-action="List">Admin List</a></td>
+                <td><a class="btn btn-success btn-sm" asp-controller="Message" asp-action="Index">Message List</a></td>
+                <td><a class="btn btn-success btn-sm" asp-controller="Account" asp-action="Register" >Register</a></td>
+                <td><a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Logout" >Logout</a></td>
+              </tr>  
+          </tbody>
+        </table>
+       </div>  
+  </div>
+</div>

@@ -1,0 +1,25 @@
+@model  IEnumerable<Blog>
+
+@if(Model.Count() == 0)
+{
+  <div class="alert alert-warning">Kayıt yok</div>
+}
+else
+{
+     @foreach(var item in Model){
+
+    <div class="card mb-2">
+    <div class="card-header text-center">
+    @item.Title
+    </div>
+    <img class="card-img-top" src="~/img/@item.Image" alt="Card image cap">
+    <div class="card-body">
+    <p class="card-text ml-2 mt-2">@item.Description</p>
+    <a asp-controller="Blog" asp-action="Details" asp-route-id="@item.BlogId"  class="btn btn-primary mb-2 ml-2">Blog Details</a>
+    </div>
+    </div>
+     }
+}
+<div style="height:50px;">
+
+</div>

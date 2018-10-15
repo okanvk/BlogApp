@@ -1,0 +1,105 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+  </PropertyGroup>
+   
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+        <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0"></DotNetCliToolReference>
+        <PackageReference Include="MailKit" Version="2.0.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="BlogApp.Data\BlogApp.Data.csproj" />
+    <ProjectReference Include="BlogApp.Entity\BlogApp.Entity.csproj" />
+
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Remove="BlogApp.Data\bin\Debug\netcoreapp2.0\BlogApp.Data.deps.json" />
+    <Content Remove="BlogApp.Data\obj\project.assets.json" />
+    <Content Remove="BlogApp.Entity\bin\Debug\netcoreapp2.0\BlogApp.Entity.deps.json" />
+    <Content Remove="BlogApp.Entity\obj\project.assets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\BlogContext.cs" />
+    <Compile Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.AssemblyInfo.cs" />
+    <Compile Remove="BlogApp.Entity\Blog.cs" />
+    <Compile Remove="BlogApp.Entity\Category.cs" />
+    <Compile Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.AssemblyInfo.cs" />
+    <Compile Remove="BlogApp.Data\Abstract\IBlogRepository.cs" />
+    <Compile Remove="BlogApp.Data\Abstract\ICategoryRepository.cs" />
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\EfBlogRepository.cs" />
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\EfCategoryRepository.cs" />
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\SeedData.cs" />
+    <Compile Remove="BlogApp.Entity\Message.cs" />
+    <Compile Remove="BlogApp.Data\Abstract\IMessageRepository.cs" />
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\EfMessageRepository.cs" />
+    <Compile Remove="BlogApp.Data\Abstract\ICommentRepository.cs" />
+    <Compile Remove="BlogApp.Data\Concrete\EFCore\EfCommentRepository.cs" />
+    <Compile Remove="BlogApp.Entity\Comment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="BlogApp.Data\bin\Debug\netcoreapp2.0\BlogApp.Data.pdb" />
+    <None Remove="BlogApp.Data\bin\Debug\netcoreapp2.0\BlogApp.Entity.dll" />
+    <None Remove="BlogApp.Data\bin\Debug\netcoreapp2.0\BlogApp.Entity.pdb" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.g.targets" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.AssemblyInfoInputs.cache" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.csproj.CopyComplete" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.csproj.CoreCompileInputs.cache" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.csproj.FileListAbsolute.txt" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.dll" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.pdb" />
+    <None Remove="BlogApp.Entity\bin\Debug\netcoreapp2.0\BlogApp.Entity.pdb" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.targets" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.AssemblyInfoInputs.cache" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.csproj.CoreCompileInputs.cache" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.csproj.FileListAbsolute.txt" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.dll" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.pdb" />
+    <None Remove="BlogApp.Data\bin\Debug\netcoreapp2.0\BlogApp.Data.dll" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.csprojResolveAssemblyReference.cache" />
+    <None Remove="BlogApp.Entity\bin\Debug\netcoreapp2.0\BlogApp.Entity.dll" />
+    <None Remove="BlogApp.Entity\obj\Debug\netcoreapp2.0\BlogApp.Entity.csprojResolveAssemblyReference.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Data\obj\project.assets.json" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Data\obj\project.assets.json" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Entity\obj\project.assets.json" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Entity\obj\project.assets.json" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Entity\obj\project.assets.json" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Entity\obj\project.assets.json" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Entity\obj\BlogApp.Entity.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.g.props" />
+    <None Remove="BlogApp.Data\obj\project.assets.json" />
+    <None Remove="BlogApp.Data\obj\BlogApp.Data.csproj.nuget.cache" />
+    <None Remove="BlogApp.Data\obj\Debug\netcoreapp2.0\BlogApp.Data.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+</Project>

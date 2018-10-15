@@ -1,0 +1,15 @@
+@model IEnumerable<Blog>
+
+<div class="container mt-3">
+<div class="row">
+      <div class="col-md-3">
+          @await Component.InvokeAsync("CategoryMenu")
+          <div style="height:50px;"></div>
+          @await Component.InvokeAsync("BlogMenu")
+        </div>
+      <div class="col-md-9">
+        
+        @Html.Partial("_BlogList",Model)
+    
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@model Message
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container my-4">
+<div class="row">
+   
+      <div class="col-md-9">
+        <form class="form-horizontal" asp-controller="Message" asp-action="Details" method="POST">
+          <fieldset>
+            <input hidden asp-for="MessageId"/>
+            <div class="form-group">
+              
+              <label class="col-md-3 control-label" asp-for="Context">Message</label>
+              <div class="col-md-9">
+                <textarea class="form-control"  asp-for="Context"  placeholder="Please enter your Context here..." rows="5"></textarea>
+              </div>
+            </div>
+             <div class="form-group">
+              <label class="col-md-3 control-label" asp-for="Subject">Subject</label>
+              <div class="col-md-9">
+                <textarea type="text" class="form-control"  asp-for="Subject"  placeholder="Please enter your Subject here..." ></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit"   class="btn btn-primary btn-lg">Submit</button> 
+              </div> 
+            </div>
+          </fieldset>
+          </form>
+          </div>
+    </div>
+ </div>
+   

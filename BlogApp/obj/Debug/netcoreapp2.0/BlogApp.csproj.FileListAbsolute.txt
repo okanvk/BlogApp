@@ -1,0 +1,10 @@
+/Users/okanciftci/Desktop/BlogApp/bin/Debug/netcoreapp2.0/BlogApp.deps.json
+/Users/okanciftci/Desktop/BlogApp/bin/Debug/netcoreapp2.0/BlogApp.runtimeconfig.json
+/Users/okanciftci/Desktop/BlogApp/bin/Debug/netcoreapp2.0/BlogApp.runtimeconfig.dev.json
+/Users/okanciftci/Desktop/BlogApp/bin/Debug/netcoreapp2.0/BlogApp.dll
+/Users/okanciftci/Desktop/BlogApp/bin/Debug/netcoreapp2.0/BlogApp.pdb
+/Users/okanciftci/Desktop/BlogApp/obj/Debug/netcoreapp2.0/BlogApp.csproj.CoreCompileInputs.cache
+/Users/okanciftci/Desktop/BlogApp/obj/Debug/netcoreapp2.0/BlogApp.AssemblyInfoInputs.cache
+/Users/okanciftci/Desktop/BlogApp/obj/Debug/netcoreapp2.0/BlogApp.AssemblyInfo.cs
+/Users/okanciftci/Desktop/BlogApp/obj/Debug/netcoreapp2.0/BlogApp.dll
+/Users/okanciftci/Desktop/BlogApp/obj/Debug/netcoreapp2.0/BlogApp.pdb

@@ -1,0 +1,26 @@
+@model LoginModel
+
+@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class = "container">
+	<div class="wrapper">
+		<form asp-action="Login" method="post" asp-controller="Account"  class="form-signin">   
+
+        <input hidden name="returnURL" value="@ViewBag.returnURL" />    
+		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+			  <hr class="colorgraph"><br>
+			  
+			  <input  asp-for="Email" class="form-control"  placeholder="Email"  />
+			  <input asp-for="Password" class="form-control"  placeholder="Password" />
+				<div class="text-danger" asp-validation-summary="All">
+
+				</div>    		  
+			 
+			  <button class="btn btn-lg btn-primary btn-block"   type="Submit">Login</button>  			
+								
+		</form>
+	</div>
+</div>

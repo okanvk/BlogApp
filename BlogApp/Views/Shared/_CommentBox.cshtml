@@ -1,0 +1,18 @@
+@model IEnumerable<Comment>
+@if(Model.Count()!=0){
+     <div class="container">
+
+    <section class="comments">
+    @foreach(var item in Model){
+        <article class="comment">
+      <div class="comment-body">
+        <div class="text">
+          <p>@item.Body</p>
+        </div>
+        <p class="attribution">by <b>@item.PublisherName</b> at @item.Date</p>
+      </div>
+    </article>
+    }
+  </section>
+  </div>
+  }

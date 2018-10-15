@@ -1,0 +1,25 @@
+@model Category
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+ <div class="bg-primary text-white p-1 text-center" >
+      <h3>Update Category</h3>
+    </div>
+<div class="container mt-2">
+
+<br/>
+<form method="POST" asp-controller="Category" asp-action="Update">
+  <div class="form-group">
+    <input hidden asp-for="@Model.CategoryId">
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" class="form-control" >
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <div>
+        <div class="text-danger" asp-validation-summary="All">
+          </div>
+      </div>
+</form>
+
+</div>

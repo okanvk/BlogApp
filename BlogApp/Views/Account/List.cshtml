@@ -1,0 +1,54 @@
+@model IEnumerable<ApplicationUser>
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+    <div class="bg-primary text-white p-1 text-center">
+      <h2>Account List</h2>
+    </div>
+  <div class="container mt-3">
+
+     <a class="btn btn-primary  mt-2" asp-controller="Account" asp-action="Register" >Register</a>
+    <hr/>
+
+    <div class="col">
+      @if(Model.Count()>0){
+        
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th >Id</th>
+              <th>Email</th>
+              <th>Name</th>
+              <th style="width: 100px;">İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach(var item in Model){
+
+              <tr>
+                <td>@item.Id</td>
+                <td>@item.Email</td>
+                <td>@item.Name</td>
+                <td>
+ 
+                  <a class="btn btn-primary btn-sm" asp-controller="Account" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                  <hr>
+                  <a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+
+
+              </tr>
+            
+            }
+           
+          </tbody>
+        </table>
+
+      }
+
+    </div>
+
+
+
+  </div>

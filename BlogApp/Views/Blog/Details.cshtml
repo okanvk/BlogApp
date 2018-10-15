@@ -1,0 +1,50 @@
+@model BlogCommentsModel
+
+<div class="container mt-3">
+
+  <div class="row">
+      <div class="col-md-3">
+        @await Component.InvokeAsync("CategoryMenu")
+        <div style="height:50px;"></div>
+          @await Component.InvokeAsync("BlogMenu")
+      </div>
+      <div class="col-md-9">
+          @Html.Partial("_BlogInfo",Model.Blog)
+        @if(Model.Comments.Count>0){
+            <hr>
+        }
+        @Html.Partial("_CommentBox",Model.Comments)
+        <hr>
+
+        @Html.Partial("_SendComment",Model.Comment) 
+    </div>
+
+
+      </div>
+
+
+  </div>
+
+</div>
+
+@section scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+            type: 'GET',
+            url: "/Blog/CountIncrease",
+            data: { id:@Model.Blog.BlogId },
+            cache: false,
+            success: function (result) {
+                
+            },
+            error: function (xhr, status, error) {
+                alert("Bir problem oluştu!");
+                RTG.FE.Loader.hide();
+            }
+        });
+        });
+    </script>
+}
+

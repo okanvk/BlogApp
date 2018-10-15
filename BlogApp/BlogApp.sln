@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.UI", "BlogApp.UI.csproj", "{AFA7E980-544F-4FC7-A2B2-9E877BD72005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.Data", "BlogApp.Data\BlogApp.Data.csproj", "{939DB6EF-0A20-460D-B104-2C5B0CD6AF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.Entity", "BlogApp.Entity\BlogApp.Entity.csproj", "{84511315-095C-4E3C-907E-A4C539B42396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA7E980-544F-4FC7-A2B2-9E877BD72005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA7E980-544F-4FC7-A2B2-9E877BD72005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA7E980-544F-4FC7-A2B2-9E877BD72005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA7E980-544F-4FC7-A2B2-9E877BD72005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939DB6EF-0A20-460D-B104-2C5B0CD6AF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939DB6EF-0A20-460D-B104-2C5B0CD6AF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939DB6EF-0A20-460D-B104-2C5B0CD6AF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939DB6EF-0A20-460D-B104-2C5B0CD6AF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84511315-095C-4E3C-907E-A4C539B42396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84511315-095C-4E3C-907E-A4C539B42396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84511315-095C-4E3C-907E-A4C539B42396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84511315-095C-4E3C-907E-A4C539B42396}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

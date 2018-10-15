@@ -1,0 +1,22 @@
+@model Category
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container mt-2">
+
+<h2>Add Category</h2>
+<br/>
+<form method="POST" asp-controller="Category" asp-action="Add">
+  <div class="form-group">
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" class="form-control" >
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <div>
+        <div class="text-danger" asp-validation-summary="All">
+          </div>
+      </div>
+</form>
+
+</div>

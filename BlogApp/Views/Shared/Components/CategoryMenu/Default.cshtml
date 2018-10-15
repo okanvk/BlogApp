@@ -1,0 +1,17 @@
+@model IEnumerable<Category>
+@{
+  Layout=null;
+}
+<div class="list-group">
+  <h5 class="list-group-item" style="background:lightslategray; color:navy;">Categories</h5>
+  @foreach(var item in Model){   
+       <a 
+        asp-controller="Blog"
+        asp-action="Index"
+        asp-route-id=@item.CategoryId
+        class="list-group-item   @(ViewBag.SelectedCategory==item.CategoryId.ToString()?"active":"") " style="color:navy;">
+        @item.Name
+        
+      </a>
+      }
+      </div>

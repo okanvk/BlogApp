@@ -1,0 +1,13 @@
+@model Blog
+
+<div class="card mb-2">
+         <div class="card-header text-center">
+            @Model.Title
+        </div>
+        <img class="card-img-top" src="~/img/@Model.Image" alt="@Model.Title">
+  <div class="card-body">
+
+    <p class="card-text">@Model.Description</p>
+    <p class="card-text">@Html.Raw(Model.Body)</p>
+    <i class="fas fa-envelope text-right" style="opacity:0.5"><i>Number of views: @Model.ViewCoun</i></i>
+

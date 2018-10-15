@@ -1,0 +1,71 @@
+@model Blog
+
+@{
+  Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section scripts{
+  <script src="~/lib/ckeditor/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("Body");
+    </script>
+}
+ <div class="bg-primary text-white p-1 text-center" >
+      <h3>Add Blog</h3>
+    </div>
+<div class="container">
+
+
+<form method="POST" asp-controller="Blog" asp-action="Add" enctype="multipart/form-data">
+  <div class="form-group">
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title"  class="form-control" >
+  </div>
+  <div class="form-group">
+    <label asp-for="Description">Description</label>
+    <textarea asp-for="Description"  class="form-control" ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label asp-for="Body">Body</label>
+    <textarea asp-for="Body"  class="form-control" ></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label>Image</label>
+    <input type="file" name="pic" required  class="form-control"/>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+    <input asp-for="isHome" class="form-check-input"/>
+    is Home</label>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+    <input asp-for="isSlider" class="form-check-input"/>
+    is Slider</label>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+    <input asp-for="isApproved" class="form-check-input"/>
+    is Approved</label>
+  </div>
+
+  <div class="form-group">
+    <label asp-for="CategoryId"></label>
+    <select class="form-control"  asp-for="CategoryId" asp-items="ViewBag.Categories">
+    </select>
+  </div>
+  <div>
+        <div class="text-danger" asp-validation-summary="All">
+          </div>
+      </div>
+
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+ 
+</form>
+
+</div>
